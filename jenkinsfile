@@ -15,13 +15,13 @@
         stage('Test Set 1 (supposed to pass) ') {
             steps {
                 sh "chmod u+x testerCor.py"
-                sh "./testerCor.py"
+                sh "python3 testerCor.py"
             }
         }
         stage('Test Set 2 (supposed to fail)') {
             steps {
                 sh "chmod u+x testerWro.py"
-                sh "./testerWro.py"
+                sh "python3 testerWro.py"
             }
         }
     } 
