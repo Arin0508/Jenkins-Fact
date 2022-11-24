@@ -1,4 +1,4 @@
-pipeline { 
+	pipeline { 
     agent any
     stages {
         stage('Clone Git') {
@@ -6,7 +6,7 @@ pipeline {
                 git 'https://github.com/Arin0508/Jenkins-Fact.git'
             }
         }
-   stage('Build Code') {
+        stage('Build Code') {
             steps {
                 sh "chmod u+x factorial.py"
                 sh "python3 factorial.py"
